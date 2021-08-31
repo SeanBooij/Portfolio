@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+    <meta charset="utf-8">
+    <title>Webdevelopment periode 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+
+    <style type="text/css">
+
+ html,body{
+     height:100%;
+ }
+
+    div.box {
+      position: absolute;
+      background: #33cc33;
+      width: 100px;
+      height: 100px;
+      animation: run 8s linear infinite alternate;
+    }
+    @keyframes run {
+      0% { left: 0;top:0;}
+      25%{ left: calc( 100% - 100px );
+            top: 0;}
+      50%{top: calc(100% - 100px); 
+        left: calc( 100% - 100px );}
+      75%{ top: calc(100% - 100px);
+           left: 0;}
+      100%{ left: 0;top: 0;}
+    }      
+      
+    </style>
+  </head>
+  <body>
+    
+
+ 
+
+    <div class="box" id="box1"></div>
+       
+  </body>
+</html>
