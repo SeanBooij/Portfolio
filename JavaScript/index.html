@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript test</title>
+    </head>
+    <body>
+        <h1>
+            Javascript test
+        </h1>
+        <p1>
+            <button id = "Dikke">Dikke</button>
+            <button id = "vette">vette</button>
+            <div class="form"> 
+                <label for="guessField">Doe eens een gok: </label> 
+                <input type = "text" id = "guessField" class = "guessField"> 
+                <input type = "submit" value = "Dien je gok in" 
+                       class = "guessSubmit" id = "submitguess"> 
+            </div>
+        </p1>
+        <script>
+            function Naam() {
+              var gegevenNaam = prompt("Wat is jouw naam?");
+              alert("Welkom " + gegevenNaam);
+            }
+            document.getElementById("Dikke").onclick = Naam;
+            var getal = Math.floor((Math.random()*10)+1);
+            var x = document.getElementById("guessField").value; 
+            var guess = 1;
+            function randomGetal() {
+                alert("Je random getal is " + getal);
+            }
+            document.getElementById("vette").onclick = randomGetal;            
+            var y = Math.floor(Math.random() * 10 + 1); 
+
+
+var guess = 0; 
+
+document.getElementById("submitguess").onclick = function(){ 
+
+
+var x = document.getElementById("guessField").value; 
+
+if(x == y) 
+{
+   alert("Nice job je hebt het getal geraden, dit heb je gedaan in "
+           + guess + " beurten"); 
+} 
+else if(x > y) 
+{
+   guess++; 
+   alert("Helaas je zit te hoog, je hebt tot nu toe " + guess + " beurten gebruikt!"); 
+} 
+else
+{ 
+   guess++; 
+   alert("Jammer genoeg zit je te laag, je hebt tot nu toe " + guess + " beurten gebruikt!") 
+} 
+} 
+console.log("Sorry dat ik het ietsjes later heb ingeleverd, zal de volgende optijd inleveren")
+        </script>
+    </body>
+    </html>
